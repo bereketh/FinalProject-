@@ -1,3 +1,3 @@
-# FinialProject-
+# FinialProject- Name of the App
 
-Working on final project.
+Created by Bereket Hailemariam and Derek Faulkner
