@@ -9,76 +9,172 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.geometry.Insets?>
 <BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml">
     <top>
-        <VBox>
+        <VBox >
             <Label text="Title">
                 <font>
                     <Font name="Times New Roman" size="175"/>
                 </font>
             </Label>
             <HBox alignment="TOP_LEFT">
-                <ComboBox>
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Vegan recipe"/>
-                        <String fx:value="American cuisine"/>
-                        <String fx:value="Thai cuisine"/>
-                        <String fx:value="Japanese cuisine"/>
-                        <String fx:value="Spanish cuisine"/>
-                    </FXCollections>
-                </items>
-                <value>
-                    <String fx:value="Vegan"/>
-                </value>
-            </ComboBox>
-                <ComboBox>
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Vegetarian recipe"/>
-                            <String fx:value="American cuisine"/>
-                            <String fx:value="Thai cuisine"/>
-                            <String fx:value="Japanese cuisine"/>
-                            <String fx:value="Spanish cuisine"/>
-                        </FXCollections>
-                    </items>
-                    <value>
-                        <String fx:value="Vegetarian"/>
-                    </value>
-                </ComboBox>
-                <ComboBox>
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Meat Lovers recipe"/>
-                            <String fx:value="American cuisine"/>
-                            <String fx:value="Thai cuisine"/>
-                            <String fx:value="Japanese cuisine"/>
-                            <String fx:value="Spanish cuisine"/>
-                        </FXCollections>
-                    </items>
-                    <value>
-                        <String fx:value="Meat Lovers"/>
-                    </value>
-                </ComboBox>
+                <padding>
+                    <Insets left="10"/>
+                </padding>
+                    <MenuBar>
+                        <Menu text="Vegan Recipes" onAction="#showNewNoteDialog">
+                            <items>
+                                <Menu text="American Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Japanese Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Spanish Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Thai Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                            </items>
+                        </Menu>
+                        <Menu text="Vegetarian Recipes">
+                            <items>
+                                <Menu text="American Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Japanese Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Spanish Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Thai Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                            </items>
+                        </Menu>
+                        <Menu text="Meat Lovers Recipes">
+                            <items>
+                                <Menu text="American Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Japanese Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Spanish Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Thai Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                            </items>
+                        </Menu>
+                    </MenuBar>
+<!--                <ComboBox>-->
+<!--                <items>-->
+<!--                    <FXCollections fx:factory="observableArrayList">-->
+<!--                        <String fx:value="Vegan recipe"/>-->
+<!--                        <String fx:value="American cuisine"/>-->
+<!--                        <String fx:value="Thai cuisine"/>-->
+<!--                        <String fx:value="Japanese cuisine"/>-->
+<!--                        <String fx:value="Spanish cuisine"/>-->
+<!--                    </FXCollections>-->
+<!--                </items>-->
+<!--                <value>-->
+<!--                    <String fx:value="Vegan"/>-->
+<!--                </value>-->
+<!--            </ComboBox>-->
+<!--                <ComboBox>-->
+<!--                    <items>-->
+<!--                        <FXCollections fx:factory="observableArrayList">-->
+<!--                            <String fx:value="Vegetarian recipe"/>-->
+<!--                            <String fx:value="American cuisine"/>-->
+<!--                            <String fx:value="Thai cuisine"/>-->
+<!--                            <String fx:value="Japanese cuisine"/>-->
+<!--                            <String fx:value="Spanish cuisine"/>-->
+<!--                        </FXCollections>-->
+<!--                    </items>-->
+<!--                    <value>-->
+<!--                        <String fx:value="Vegetarian"/>-->
+<!--                    </value>-->
+<!--                </ComboBox>-->
+<!--                <ComboBox>-->
+<!--                    <items>-->
+<!--                        <FXCollections fx:factory="observableArrayList">-->
+<!--                            <String fx:value="Meat Lovers recipe"/>-->
+<!--                            <String fx:value="American cuisine"/>-->
+<!--                            <String fx:value="Thai cuisine"/>-->
+<!--                            <String fx:value="Japanese cuisine"/>-->
+<!--                            <String fx:value="Spanish cuisine"/>-->
+<!--                        </FXCollections>-->
+<!--                    </items>-->
+<!--                    <value>-->
+<!--                        <String fx:value="Meat Lovers"/>-->
+<!--                    </value>-->
+<!--                </ComboBox>-->
 <!--                <Button text="Vegan" prefWidth="100"/>-->
 <!--                <Button text="Vegetarian" prefWidth="100"/>-->
 <!--                <Button text="Meat Lovers" prefWidth="100"/>-->
             </HBox>
             <HBox alignment="TOP_RIGHT">
-                <VBox>
-                    <Label text="Username"/>
-                    <TextField fx:id="nameField"/>
-                    <!--                <Label text="Email : "/>-->
-                    <!--                <TextField fx:id="emailField"/>-->
-                    <Label text="Password"/>
-                    <PasswordField fx:id="passwordField"/>
-                    <Button text="Sign In" defaultButton="true" fx:id="submitButton"/>
-                </VBox>
+<!--                <VBox>-->
+<!--                    <Label text="Username"/>-->
+<!--                    <TextField fx:id="nameField"/>-->
+<!--                    &lt;!&ndash;                <Label text="Email : "/>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                <TextField fx:id="emailField"/>&ndash;&gt;-->
+<!--                    <Label text="Password"/>-->
+<!--                    <PasswordField fx:id="passwordField"/>-->
+<!--                    <Button text="Sign In" defaultButton="true" fx:id="submitButton"/>-->
+<!--                </VBox>-->
             </HBox>
         </VBox>
     </top>
     <left>
         <VBox alignment="CENTER_LEFT">
+            <padding>
+                <Insets left="10"/>
+            </padding>
             <Button text="Create" prefWidth="100"/>
             <Button text="Post" prefWidth="100"/>
             <Button text="Trending" prefWidth="100"/>
@@ -87,6 +183,9 @@
     </left>
     <right>
         <VBox alignment="CENTER_RIGHT">
+            <padding>
+                <Insets right="10"/>
+            </padding>
             <Button text="Blogs" prefWidth="100"/>
         </VBox>
     </right>
