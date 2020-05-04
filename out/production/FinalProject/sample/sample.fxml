@@ -4,23 +4,21 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.geometry.Insets?>
 <BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml">
     <top>
-        <VBox >
-            <Label text="Title">
-                <font>
-                    <Font name="Times New Roman" size="175"/>
-                </font>
-            </Label>
+        <VBox>
+            <HBox alignment="CENTER">
+                <Label text="My Recipe Generator">
+                    <font>
+                        <Font name="Times New Roman" size="50"/>
+                    </font>
+                </Label>
+            </HBox>
             <HBox alignment="TOP_LEFT">
                 <padding>
                     <Insets left="10"/>
@@ -111,62 +109,6 @@
                             </items>
                         </Menu>
                     </MenuBar>
-<!--                <ComboBox>-->
-<!--                <items>-->
-<!--                    <FXCollections fx:factory="observableArrayList">-->
-<!--                        <String fx:value="Vegan recipe"/>-->
-<!--                        <String fx:value="American cuisine"/>-->
-<!--                        <String fx:value="Thai cuisine"/>-->
-<!--                        <String fx:value="Japanese cuisine"/>-->
-<!--                        <String fx:value="Spanish cuisine"/>-->
-<!--                    </FXCollections>-->
-<!--                </items>-->
-<!--                <value>-->
-<!--                    <String fx:value="Vegan"/>-->
-<!--                </value>-->
-<!--            </ComboBox>-->
-<!--                <ComboBox>-->
-<!--                    <items>-->
-<!--                        <FXCollections fx:factory="observableArrayList">-->
-<!--                            <String fx:value="Vegetarian recipe"/>-->
-<!--                            <String fx:value="American cuisine"/>-->
-<!--                            <String fx:value="Thai cuisine"/>-->
-<!--                            <String fx:value="Japanese cuisine"/>-->
-<!--                            <String fx:value="Spanish cuisine"/>-->
-<!--                        </FXCollections>-->
-<!--                    </items>-->
-<!--                    <value>-->
-<!--                        <String fx:value="Vegetarian"/>-->
-<!--                    </value>-->
-<!--                </ComboBox>-->
-<!--                <ComboBox>-->
-<!--                    <items>-->
-<!--                        <FXCollections fx:factory="observableArrayList">-->
-<!--                            <String fx:value="Meat Lovers recipe"/>-->
-<!--                            <String fx:value="American cuisine"/>-->
-<!--                            <String fx:value="Thai cuisine"/>-->
-<!--                            <String fx:value="Japanese cuisine"/>-->
-<!--                            <String fx:value="Spanish cuisine"/>-->
-<!--                        </FXCollections>-->
-<!--                    </items>-->
-<!--                    <value>-->
-<!--                        <String fx:value="Meat Lovers"/>-->
-<!--                    </value>-->
-<!--                </ComboBox>-->
-<!--                <Button text="Vegan" prefWidth="100"/>-->
-<!--                <Button text="Vegetarian" prefWidth="100"/>-->
-<!--                <Button text="Meat Lovers" prefWidth="100"/>-->
-            </HBox>
-            <HBox alignment="TOP_RIGHT">
-<!--                <VBox>-->
-<!--                    <Label text="Username"/>-->
-<!--                    <TextField fx:id="nameField"/>-->
-<!--                    &lt;!&ndash;                <Label text="Email : "/>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                <TextField fx:id="emailField"/>&ndash;&gt;-->
-<!--                    <Label text="Password"/>-->
-<!--                    <PasswordField fx:id="passwordField"/>-->
-<!--                    <Button text="Sign In" defaultButton="true" fx:id="submitButton"/>-->
-<!--                </VBox>-->
             </HBox>
         </VBox>
     </top>
@@ -190,7 +132,13 @@
         </VBox>
     </right>
     <center>
-
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER">
+                <Label text="My Recipe"/>
+                <TextField fx:id="searchField" prefWidth="500"/>
+                <Button text="Create" defaultButton="true" fx:id="submitButton" onAction="#create"/>
+            </VBox>
+        </HBox>
     </center>
     <bottom>
         <HBox alignment="BOTTOM_CENTER">
