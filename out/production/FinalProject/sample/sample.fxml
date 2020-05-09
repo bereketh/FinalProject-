@@ -4,40 +4,145 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.geometry.Insets?>
 <BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml">
     <top>
         <VBox>
-            <Label text="Title">
-                <font>
-                    <Font name="Times New Roman" size="175"/>
-                </font>
-            </Label>
-            <HBox alignment="TOP_CENTER">
-                <Button text="Vegan" prefWidth="90"/>
-                <Button text="Vegetarian" prefWidth="90"/>
-                <Button text="Meat Lovers" prefWidth="100"/>
+            <HBox alignment="CENTER">
+                <Label text="My Recipe Generator">
+                    <font>
+                        <Font name="Times New Roman" size="50"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="TOP_LEFT">
+                <padding>
+                    <Insets left="10"/>
+                </padding>
+                    <MenuBar>
+                        <Menu text="Vegan Recipes">
+                            <items>
+                                <Menu text="American Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Japanese Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Spanish Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Thai Cuisine">
+                                    <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegan Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegan Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegan Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                            </items>
+                        </Menu>
+                        <Menu text="Vegetarian Recipes">
+                            <items>
+                                <Menu text="American Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Japanese Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Spanish Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Thai Cuisine">
+                                    <MenuItem text="Vegetarian Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Vegetarian Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Vegetarian Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Vegetarian Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                            </items>
+                        </Menu>
+                        <Menu text="Meat Lovers Recipes">
+                            <items>
+                                <Menu text="American Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Japanese Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Spanish Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                                <Menu text="Thai Cuisine">
+                                    <MenuItem text="Meat Lovers Recipe 1" fx:id="Recipe1"/>
+                                    <MenuItem text="Meat Lovers Recipe 2" fx:id="Recipe2"/>
+                                    <MenuItem text="Meat Lovers Recipe 3" fx:id="Recipe3"/>
+                                    <MenuItem text="Meat Lovers Recipe 4" fx:id="Recipe4"/>
+                                </Menu>
+                            </items>
+                        </Menu>
+                    </MenuBar>
             </HBox>
         </VBox>
     </top>
     <left>
         <VBox alignment="CENTER_LEFT">
-            <Button text="Create" prefWidth="100"/>
-            <Button text="Post" prefWidth="100"/>
-            <Button text="Trending" prefWidth="100"/>
-            <Button text="Home" prefWidth="100"/>
+            <padding>
+                <Insets left="10"/>
+            </padding>
+            <Button text="Create" prefWidth="100" fx:id="createButton" onAction="#create"/>
+            <Button text="Post" prefWidth="100" fx:id="postButton" onAction="#post"/>
+            <Button text="Trending" prefWidth="100" fx:id="trendingButton" onAction="#trending"/>
+            <Button text="Home" prefWidth="100" fx:id="homeButton" onAction="#home"/>
         </VBox>
     </left>
     <right>
         <VBox alignment="CENTER_RIGHT">
-            <Button text="Blogs" prefWidth="90"/>
+            <padding>
+                <Insets right="10"/>
+            </padding>
+            <Button text="Blogs" prefWidth="100" fx:id="blogButton" onAction="#blog"/>
         </VBox>
     </right>
     <center>
-
+        <HBox alignment="CENTER">
+            <VBox alignment="CENTER">
+                <Label text="My Recipe"/>
+                <TextField fx:id="searchField" prefWidth="500"/>
+                <Button text="Search" defaultButton="true" fx:id="submitButton" onAction="#search"/>
+            </VBox>
+        </HBox>
     </center>
     <bottom>
         <HBox alignment="BOTTOM_CENTER">
-            <Button text="About Us" prefWidth="90"/>
+            <Button text="About Us" prefWidth="100" fx:id="aboutUsButton" onAction="#aboutUs"/>
         </HBox>
     </bottom>
 </BorderPane>

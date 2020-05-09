@@ -11,8 +11,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Title");
-        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.setTitle("My Recipe Generator");
+        primaryStage.setScene(new Scene(root, 800, 550));
         primaryStage.show();
     }
 
