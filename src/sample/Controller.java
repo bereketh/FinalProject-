@@ -13,13 +13,17 @@ public class Controller {
     @FXML
     private void search(ActionEvent actionEvent) {
         if (searchField.getText().isEmpty()) {
-            AlertHelper.showAlert(Alert.AlertType.ERROR, "Invalid Entry", "Please input your ingredients");
-
+            AlertHelper.showAlert(Alert.AlertType.ERROR, "Invalid Entry", "Please input your ingredients.");
         }
         else {
-            Recipe hotDog = new Recipe("Hotdog", new String[] {"Buns", "Hotlinks"},"Cook links on stove top.");
-            Recipe pasta = new Recipe("Pasta", new String[] {"Pasta", "Sauce"}, "Boil past for 5 mins and add to sauce");
-            Recipe[] recipes = {hotDog, pasta};
+            Recipe hotDog = new Recipe("HotDog", new String[] {"Buns", "Hotlinks"},"Cook links on stove top.");
+            Recipe pasta = new Recipe("Pasta", new String[] {"Pasta", "Sauce"}, "Boil past for 5 minutes and add to sauce.");
+            Recipe hamburger = new Recipe("Hamburger", new String[] {"Patties", "Buns", "Tomato", "Lettuce", "Cheese"}, "Grill patty on grill and toast buns.");
+            Recipe tacos = new Recipe("Tacos", new String[] {"Meat", "Shell", "Cheese", "Salsa", "Guacamole"}, "Cook meat in a pan. Add favorite toppings to shell.");
+            Recipe salad = new Recipe("Salad", new String[] {"Baby Spinach", "Tomatoes", "Dressing"}, "Mix it really good! :).");
+            Recipe ramen = new Recipe("Ramen", new String[] {"Noodles", "Broth", "Protein", "Soy Sauce", "Boiled Eggs","Bamboo Shoots"}, "Boil broth and add all the shit together.");
+            Recipe cookies = new Recipe("Cookies", new String[] {"Chocolate Chips", "Milk", "Butter", "Eggs", "Flour"}, "Mix together and bank at 425 degrees. Enjoy");
+            Recipe[] recipes = {hotDog, pasta, hamburger, tacos, salad, ramen, cookies};
             System.out.println(searchField.getText());
 
             for (int i = 0; i < recipes.length; i++) {
@@ -35,21 +39,6 @@ public class Controller {
                 }
             }
             return;
-            /*
-            @TODO
-            Once the search input is correctly accessed, loop through the recipes to see if there are any matching
-            ingredients.
-
-            @TODO
-            If there are any matching ingredients, print the name of the object with the matching ingredients to the console
-
-            @TODO
-            Print the name of the recipe containing the matching ingredient to the Alert.
-
-            @TODO
-            Print the instructions to the alert.
-             */
-//             AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, "Match Found", "Here are your options");
         }
     }
 
