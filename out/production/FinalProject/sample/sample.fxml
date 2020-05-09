@@ -24,7 +24,7 @@
                     <Insets left="10"/>
                 </padding>
                     <MenuBar>
-                        <Menu text="Vegan Recipes" onAction="#showNewNoteDialog">
+                        <Menu text="Vegan Recipes">
                             <items>
                                 <Menu text="American Cuisine">
                                     <MenuItem text="Vegan Recipe 1" fx:id="Recipe1"/>
@@ -117,10 +117,10 @@
             <padding>
                 <Insets left="10"/>
             </padding>
-            <Button text="Create" prefWidth="100"/>
-            <Button text="Post" prefWidth="100"/>
-            <Button text="Trending" prefWidth="100"/>
-            <Button text="Home" prefWidth="100"/>
+            <Button text="Create" prefWidth="100" fx:id="createButton" onAction="#create"/>
+            <Button text="Post" prefWidth="100" fx:id="postButton" onAction="#post"/>
+            <Button text="Trending" prefWidth="100" fx:id="trendingButton" onAction="#trending"/>
+            <Button text="Home" prefWidth="100" fx:id="homeButton" onAction="#home"/>
         </VBox>
     </left>
     <right>
@@ -128,7 +128,7 @@
             <padding>
                 <Insets right="10"/>
             </padding>
-            <Button text="Blogs" prefWidth="100"/>
+            <Button text="Blogs" prefWidth="100" fx:id="blogButton" onAction="#blog"/>
         </VBox>
     </right>
     <center>
@@ -136,13 +136,13 @@
             <VBox alignment="CENTER">
                 <Label text="My Recipe"/>
                 <TextField fx:id="searchField" prefWidth="500"/>
-                <Button text="Create" defaultButton="true" fx:id="submitButton" onAction="#create"/>
+                <Button text="Search" defaultButton="true" fx:id="submitButton" onAction="#search"/>
             </VBox>
         </HBox>
     </center>
     <bottom>
         <HBox alignment="BOTTOM_CENTER">
-            <Button text="About Us" prefWidth="100"/>
+            <Button text="About Us" prefWidth="100" fx:id="aboutUsButton" onAction="#aboutUs"/>
         </HBox>
     </bottom>
 </BorderPane>
